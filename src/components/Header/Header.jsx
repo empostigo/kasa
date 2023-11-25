@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import dLogo from "../../assets/d-logo.svg"
 import mLogo from "../../assets/m-logo.svg"
 import header from "./Header.module.scss"
@@ -17,8 +18,8 @@ const NavBar = () => {
   return (
     <nav className={header.navbar}>
       <ul className={header.ul}>
-        <li className={header.li}><a className={header.anchor} href="#">Accueil</a></li>
-        <li className={header.li}><a className={header.anchor} href="#">A Propos</a></li>
+        <li className={header.li}><Link to="/" className={header.anchor}>Accueil</Link></li>
+        <li className={header.li}><Link to="/about" className={header.anchor}>A Propos</Link></li>
       </ul>
     </nav>
   )
