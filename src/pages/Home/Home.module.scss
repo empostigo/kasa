@@ -1,15 +1,17 @@
 .home {
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 111px;
+  .section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 111px;
 
-  @media (min-width: 476px) {
-    justify-content: center;
-  }
+    @media (min-width: 476px) {
+      justify-content: center;
+    }
 
-  @media (min-width: 768px) {
-    height: 223px;
+    @media (min-width: 768px) {
+      height: 223px;
+    }
   }
 
   .text {
