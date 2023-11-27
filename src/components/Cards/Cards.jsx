@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import card from "./Cards.module.scss"
 
-const Card = ({id, image, altText, title}) => {
+const Card = ({id, image, title}) => {
   return (
     <article className={card.card}>
       <Link to={`/housing/${id}`} className={card.link}>

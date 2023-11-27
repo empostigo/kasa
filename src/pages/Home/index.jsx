@@ -11,7 +11,7 @@ const Home = () => {
         <Banner image={bannerImg} altText="Bannière Page d'Accueil" />
       </section>
       <section>
-        <Card id={1234} image="" altText="test" tilte="title" />
+        <Card id={1234} image="" tilte="title" />
       </section>
     </main>
   )
