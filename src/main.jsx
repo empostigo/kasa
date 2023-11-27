@@ -1,4 +1,8 @@
-import router from "./components/Router"
+import ReactDOM from "react-dom/client"
+import KasaRouter from "./components/Router"
 import "./main.module.scss"
 
-router()
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <KasaRouter />
+  )
