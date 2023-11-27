@@ -10,7 +10,7 @@ import {
 
 // Pages
 import Home from "../pages/Home"
-import About from "../pages/About"
+//import About from "../pages/About"
 import Housing from "../pages/Housing"
 import Error404 from "../pages/404"
 
@@ -26,7 +26,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/housing" element={<Housing />} />
-        <Route path="/about" element={<About />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />
@@ -35,4 +34,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   )
 }
 
+        // <Route path="/about" element={<About />} />
 export default router

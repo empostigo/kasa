@@ -1,11 +1,49 @@
 .banner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 111px;
 
+  @media (min-width: 476px) {
+    justify-content: center;
+  }
+
+  @media (min-width: 768px) {
+    height: 223px;
+  }
+
+  .div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    margin-left: 4.3vw;
+    color: white;
+
+    @media (min-width: 476px) {
+      margin-left: 0;
+    }
+
+    @media (min-width: 992px) {
+      font-size: 48px;
+    }
+  }
+
+  .span {
+    display: block;
+
+    @media (min-width: 476px) {
+      display: inline;
+    }
+  }
   .img {
     object-fit: cover;
     height: 111px;

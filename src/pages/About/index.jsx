@@ -1,3 +1,4 @@
+/*
 import Banner from "../../components/Banner/Banner"
 import bannerImg from "../../assets/about-banner.svg"
 import about from "./About.module.scss"
@@ -13,3 +14,4 @@ const About = () => {
 }
 
 export default About
+*/
