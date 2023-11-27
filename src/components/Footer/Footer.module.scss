@@ -6,9 +6,11 @@
   align-items: center;
   height: 210px;
   margin: 0 -100px;
+  margin-top: 27px;
 
   @media (min-width: 768px) {
     justify-content: end;
+    margin-top: 50px;
   }
 
   .logo {
