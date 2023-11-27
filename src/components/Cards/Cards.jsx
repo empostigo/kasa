@@ -1,3 +1,4 @@
+import housingData from "../../data/logements.json"
 import { Link } from "react-router-dom"
 import card from "./Cards.module.scss"
 
@@ -12,4 +13,16 @@ const Card = ({id, image, title}) => {
   )
 }
 
-export default Card
+const Cards = () => {
+  const cards = housingData
+                .map(object => (({id, title, cover}) => ({id, title, cover}))(object))
+                .map(card => <Card key={card.id} id={card.id} image={card.cover} tilte={card.title} />)
+
+  return (
+    <section className={card.cards}>
+     {cards} 
+    </section>
+  )
+}
+
+export default Cards

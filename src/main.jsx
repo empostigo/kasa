@@ -5,4 +5,4 @@ import "./main.module.scss"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <KasaRouter />
-  )
+)
