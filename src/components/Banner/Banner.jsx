@@ -24,3 +24,11 @@ export const HomeBanner = ({image, altText}) => {
     </Banner>
   )
 }
+
+export const AboutBanner = ({image, altText}) => {
+  return (
+    <Banner>
+      <BannerImg image={image} altText={altText} />
+    </Banner>
+  )
+}
