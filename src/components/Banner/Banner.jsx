@@ -8,7 +8,7 @@ const BannerImg = ({image, altText}) => {
   )
 }
 
-const Banner = ({children}) => {
+const BasicBanner = ({children}) => {
   return (
     <section className={banner.banner}>
       {children}
@@ -18,17 +18,17 @@ const Banner = ({children}) => {
 
 export const HomeBanner = ({image, altText}) => {
   return (
-    <Banner>
+    <BasicBanner>
       <BannerImg image={image} altText={altText} />
       <h1 className={banner.title}>Chez vous, <span className={banner.span}>partout et ailleurs</span></h1>
-    </Banner>
+    </BasicBanner>
   )
 }
 
 export const AboutBanner = ({image, altText}) => {
   return (
-    <Banner>
+    <BasicBanner>
       <BannerImg image={image} altText={altText} />
-    </Banner>
+    </BasicBanner>
   )
 }
