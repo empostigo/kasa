@@ -2,9 +2,12 @@ import banner from "./Banner.module.scss"
 
 const BannerImg = ({image, altText}) => {
   return (
-    <div className={banner.div}>
-      <img className={banner.img} src={image} alt={altText} />
-    </div>
+    <>
+      <div className={banner.div}>
+        <img className={banner.img} src={image} alt={altText} />
+      </div>
+      <div className={banner.filter}></div>
+    </>
   )
 }
 
