@@ -16,7 +16,7 @@ const Card = ({id, image, title}) => {
 const Cards = () => {
   const cards = housingData
                 .map(object => (({id, title, cover}) => ({id, title, cover}))(object))
-                .map(card => <Card key={card.id} id={card.id} image={card.cover} tilte={card.title} />)
+                .map(card => <Card key={card.id} id={card.id} image={card.cover} title={card.title} />)
 
   return (
     <section className={card.cards}>
