@@ -1,2 +1,9 @@
 .home {
+  display: flex;
+  flex-direction: column;
+  row-gap: 22px;
+
+  @media (min-width: 768px) {
+    row-gap: 43px;
+  }
 }
