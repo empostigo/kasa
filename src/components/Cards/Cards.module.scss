@@ -31,6 +31,8 @@
     height: 255px;
     width: 100%;
     margin: auto;
+    scale: 1;
+    transition: scale 200ms ease-out 100ms;
 
     @media (min-width: 576px) {
       height: 42vw;
@@ -45,6 +47,10 @@
     @media (min-width: 992px) {
       height: 23.6vw;
       width: 23.6vw;
+    }
+
+    &:hover {
+      scale: 1.02;
     }
   }
 
