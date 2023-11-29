@@ -1,8 +1,14 @@
 body {
   font-family: "Montserrat", sans-serif;
   margin: 20px 20px 0 20px;
+  max-width: 1440px;
 
   @media (min-width: 768px) {
     margin: 45px 100px 0 100px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0 100px;
+    margin: 45px auto;
   }
 }
