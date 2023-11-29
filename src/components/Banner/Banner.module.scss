@@ -21,14 +21,15 @@
     z-index: -1;
   }
 
-  .filter {
-    position: absolute;
-    height: 100%;
+  .img {
+    object-fit: cover;
+    height: 111px;
     width: 100%;
-    background: rgb(0, 0, 0, 0.3);
     border-radius: 10px;
+    filter: brightness(0.7);
 
     @media (min-width: 768px) {
+      height: 223px;
       border-radius: 25px;
     }
   }
@@ -44,6 +45,10 @@
       margin-left: 0;
     }
 
+    @media (min-width: 768px) {
+      font-size: 38px;
+    }
+
     @media (min-width: 992px) {
       font-size: 48px;
     }
@@ -54,18 +59,6 @@
 
     @media (min-width: 476px) {
       display: inline;
-    }
-  }
-  .img {
-    object-fit: cover;
-    height: 111px;
-    width: 100%;
-    border-radius: 10px;
-    background-blend-mode: darken;
-
-    @media (min-width: 768px) {
-      height: 223px;
-      border-radius: 25px;
     }
   }
 }

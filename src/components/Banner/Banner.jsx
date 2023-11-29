@@ -6,7 +6,6 @@ const BannerImg = ({image, altText}) => {
       <div className={banner.div}>
         <img className={banner.img} src={image} alt={altText} />
       </div>
-      <div className={banner.filter}></div>
     </>
   )
 }
