@@ -1,6 +1,6 @@
 import { HomeBanner, AboutBanner } from "../components/Banner/Banner"
-import homeImg from "../assets/home-banner.svg"
-import aboutImg from "../assets/about-banner.svg"
+import homeImg from "../assets/home-banner.jpg"
+import aboutImg from "../assets/about-banner.jpg"
 
 const Banner = () => {
   const pageURL = document.location
