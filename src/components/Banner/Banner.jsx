@@ -1,6 +1,6 @@
 import banner from "./Banner.module.scss"
-import homeImg from "../assets/home-banner.jpg"
-import aboutImg from "../assets/about-banner.jpg"
+import homeImg from "../../assets/home-banner.jpg"
+import aboutImg from "../../assets/about-banner.jpg"
 
 const BannerImg = ({image, altText}) => {
   return (
