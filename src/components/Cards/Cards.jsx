@@ -4,9 +4,13 @@ import card from "./Cards.module.scss"
 
 const Card = ({id, image, title}) => {
   return (
-    <article className={card.card}>
+    <article
+      className={card.card}
+      style={{
+        backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5) ), url(${image})`,
+        backgroundSize: "cover"
+      }}>
       <Link to={`/housing/${id}`} className={card.link}>
-        <img src={image} alt={`Logement ${id}`} className={card.img} />
         <h2 className={card.h2}>{title}</h2>
       </Link>
     </article>
