@@ -2,16 +2,16 @@ import housingData from "../../data/logements.json"
 import { Link } from "react-router-dom"
 import card from "./Cards.module.scss"
 
-const Card = ({id, image, title}) => {
+const Card = (props) => {
   return (
     <article
       className={card.card}
       style={{
-        backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5) ), url(${image})`,
+        backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5) ), url(${props.image})`,
         backgroundSize: "cover"
       }}>
-      <Link to={`/housing/${id}`} className={card.link}>
-        <h2 className={card.h2}>{title}</h2>
+      <Link to={`/housing/${props.id}`} className={card.link}>
+        <h2 className={card.h2}>{props.title}</h2>
       </Link>
     </article>
   )

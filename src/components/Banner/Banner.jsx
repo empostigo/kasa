@@ -2,16 +2,6 @@ import banner from "./Banner.module.scss"
 import homeImg from "../../assets/home-banner.jpg"
 import aboutImg from "../../assets/about-banner.jpg"
 
-const BannerImg = ({image, altText}) => {
-  return (
-    <>
-      <div className={banner.div}>
-        <img className={banner.img} src={image} alt={altText} />
-      </div>
-    </>
-  )
-}
-
 const BasicBanner = ({children}) => {
   return (
     <section className={banner.banner}>
@@ -20,19 +10,29 @@ const BasicBanner = ({children}) => {
   )
 }
 
-const HomeBanner = ({image, altText}) => {
+const BannerImg = (props) => {
+  return (
+    <>
+      <div className={banner.div}>
+        <img className={banner.img} src={props.image} alt={props.altText} />
+      </div>
+    </>
+  )
+}
+
+const HomeBanner = (props) => {
   return (
     <BasicBanner>
-      <BannerImg image={image} altText={altText} />
+      <BannerImg image={props.image} altText={props.altText} />
       <h1 className={banner.title}>Chez vous, <span className={banner.span}>partout et ailleurs</span></h1>
     </BasicBanner>
   )
 }
 
-const AboutBanner = ({image, altText}) => {
+const AboutBanner = (props) => {
   return (
     <BasicBanner>
-      <BannerImg image={image} altText={altText} />
+      <BannerImg image={props.image} altText={props.altText} />
     </BasicBanner>
   )
 }
