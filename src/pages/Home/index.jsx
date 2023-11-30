@@ -1,4 +1,4 @@
-import Banner from "../../factory/banner"
+import Banner from "../../components/Banner/Banner"
 import Cards from "../../components/Cards/Cards"
 import home from "./Home.module.scss"
 

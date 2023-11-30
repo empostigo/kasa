@@ -1,4 +1,4 @@
-import Banner from "../../factory/banner"
+import Banner from "../../components/Banner/Banner"
 import about from "./About.module.scss"
 
 const About = () => {
