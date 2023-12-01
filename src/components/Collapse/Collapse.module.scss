@@ -1,0 +1,55 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: 992px) {
+    gap: 30px;
+  }
+
+  .details {
+    position: relative;
+    font-size: 13px;
+    cursor: pointer;
+    background-color: #f6f6f6;
+    border-radius: 5px;
+
+    &[open] > .summary::after {
+      transform: rotate(180deg);
+    }
+
+    @media (min-width: 992px) {
+      font-size: 24px;
+      margin: 0 100px;
+    }
+
+    .summary {
+      font-weight: 500;
+      background-color: #ff6060;
+      border-radius: 5px;
+      color: white;
+      list-style: none;
+      padding: 10px;
+
+      @media (min-width: 992px) {
+        padding: 15px;
+      }
+
+      &::after {
+        position: absolute;
+        right: 12px;
+        content: url("../../assets/m-disclosure.svg");
+
+        @media (min-width: 992px) {
+          content: url("../../assets/d-disclosure.svg");
+          right: 18px;
+        }
+      }
+    }
+
+    .description {
+      color: #ff6060;
+      margin: 20px;
+    }
+  }
+}

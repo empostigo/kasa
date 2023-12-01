@@ -1,2 +1,9 @@
 .about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: 992px) {
+    gap: 38px;
+  }
 }
