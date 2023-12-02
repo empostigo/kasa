@@ -1,9 +1,9 @@
 // React logtic
 import React from "react"
 import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
+  createBrowserRouter,
+  RouterProvider,
+  Outlet,
 } from "react-router-dom"
 
 // Pages
@@ -16,19 +16,44 @@ import Error404 from "../pages/404"
 import Header from "./Header/Header"
 import Footer from "./Footer/Footer"
 
+const Layout = () => {
+  return (
+    <>
+      <Header />
+      <Outlet />
+      <Footer />
+    </>
+  )
+}
+
+const router = createBrowserRouter([
+  {
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />
+      },
+      {
+        path: "/housing",
+        element: <Housing />
+      },
+      {
+        path: "/about",
+        element: <About />
+      },
+      {
+        path: "*",
+        element: <Error404 />
+      },
+    ]
+  }
+])
+
 const KasaRouter = () => {
   return (
     <React.StrictMode>
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/housing" element={<Housing />} />
-          <Route path="/about" element={<About />} />
-          <Route path="*" element={<Error404 />} />
-        </Routes>
-        <Footer />
-      </Router>
+      <RouterProvider router={router} />
     </React.StrictMode>
   )
 }
