@@ -1,4 +1,4 @@
-// React logtic
+// React logic
 import React from "react"
 import {
   createBrowserRouter,
