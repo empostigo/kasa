@@ -1,5 +1,5 @@
 const Error404 = () => {
-  return
+  return "oups!"
 }
 
 export default Error404

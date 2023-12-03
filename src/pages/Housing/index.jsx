@@ -1,4 +1,4 @@
-const Housing = () => {
+const Housing = (props) => {
   return
 }
 
