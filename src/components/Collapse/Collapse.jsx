@@ -28,3 +28,7 @@ export const AboutSection = () => {
     </section>
   )
 }
+
+export const HousingCollapse = () => {
+  return
+}

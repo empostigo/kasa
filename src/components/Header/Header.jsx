@@ -18,12 +18,12 @@ const NavBar = () => {
 const Header = () => {
   return (
     <header className={header.header}>
-      <SrcSet logo={dLogo}
-              dLogo={dLogo}
-              mLogo={mLogo}
+      <SrcSet img={dLogo}
+              dImg={dLogo}
+              mImg={mLogo}
               mWidth="146"
               dWidth="211"
-              maxWidth="992"
+              maxWidth="991"
               altText="Logo Kasa"
       />
       <NavBar />

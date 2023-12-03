@@ -15,6 +15,7 @@ import Error404 from "../pages/404"
 // Components
 import Header from "./Header/Header"
 import Footer from "./Footer/Footer"
+import SlideShow from "./SlideShow/SlideShow"
 
 const Layout = () => {
   return (
@@ -41,6 +42,11 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      /* DEBUG */
+      {
+        path: "/test",
+        element: <div><SlideShow /></div>,
       },
       {
         path: "*",

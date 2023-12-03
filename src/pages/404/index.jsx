@@ -8,11 +8,12 @@ const Error404 = () => {
   return (
     <main className={error.main}>
       <SrcSet 
-        dLogo={dLogo}
-        mLogo={mLogo}
+        img={dLogo}
+        dImg={dLogo}
+        mImg={mLogo}
         mWidth="199"
         dWidth="598"
-        maxWidth="992"
+        maxWidth="991"
         altText="Erreur 404"
       />
       <p className={error.text}>Oups! La page que vous demandez n'existe pas.</p>
