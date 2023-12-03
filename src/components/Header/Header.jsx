@@ -1,18 +1,8 @@
 import { Link } from "react-router-dom"
+import SrcSet from "../SrcSet/SrcSet"
 import dLogo from "../../assets/d-logo.svg"
 import mLogo from "../../assets/m-logo.svg"
 import header from "./Header.module.scss"
-
-const SrcSet = () => {
-  return (
-    <img
-      src={dLogo}
-      srcSet={`${mLogo} 146w, ${dLogo} 211w`}
-      sizes="(max-width: 992px) 146px, 211px"
-      alt="Logo Kasa"
-    />
-  )
-}
 
 const NavBar = () => {
   return (
@@ -28,7 +18,14 @@ const NavBar = () => {
 const Header = () => {
   return (
     <header className={header.header}>
-      <SrcSet />
+      <SrcSet logo={dLogo}
+              dLogo={dLogo}
+              mLogo={mLogo}
+              mWidth="146"
+              dWidth="211"
+              maxWidth="992"
+              altText="Logo Kasa"
+      />
       <NavBar />
     </header>
   )

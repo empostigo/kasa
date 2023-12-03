@@ -1,0 +1,32 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 113px;
+  margin: 113px 0;
+
+  @media (min-width: 992px) {
+    gap: 140px;
+    margin: 140px 0;
+  }
+
+  .link {
+    font-size: 14px;
+    font-weight: 500;
+    color: #ff6060;
+
+    @media (min-width: 992px) {
+      font-size: 18px;
+    }
+  }
+
+  .text {
+    text-align: center;
+    color: #ff6060;
+    font-size: 18px;
+
+    @media (min-width: 992px) {
+      font-size: 36px;
+    }
+  }
+}
