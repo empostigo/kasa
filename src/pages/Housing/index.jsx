@@ -1,4 +1,5 @@
 import housingData from "../../data/logements.json"
+import { useParams } from "react-router-dom"
 import SlideShow from "../../components/SlideShow/SlideShow"
 import Tags from "../../components/Tags/Tags"
 import Stars from "../../components/Stars/Stars"
@@ -6,10 +7,14 @@ import { HousingCollapse } from "../../components/Collapse/Collapse"
 
 import housing from "./Housing.module.scss"
 
-const Housing = (props) => {
+const Housing = () => {
+  const { id } = useParams()
+  const data = housingData.find(data => data.id === id)
+
+
   return (
     <main>
-      <SlideShow />
+      <SlideShow pictures={data.pictures} />
       <section>
         <div>
           <div>
