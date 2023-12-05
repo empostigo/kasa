@@ -1,0 +1,8 @@
+.rate {
+  display: flex;
+  gap: 2px;
+
+  @media (min-width: 992px) {
+    gap: 4px;
+  }
+}

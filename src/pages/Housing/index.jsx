@@ -13,25 +13,28 @@ const Housing = () => {
   const { id } = useParams()
   const data = housingData.find(data => data.id === id)
 
-
   return (
     <main className={housing.housing}>
       <SlideShow pictures={data.pictures} />
       <section>
         <div className={housing.infos}>
           <article className={housing.banner}>
-            <div className={housing.titles} >
+            <div className={housing.titles}>
               <h1 className={housing.h1}>{data.title}</h1>
               <h2 className={housing.h2}>{data.location}</h2>
             </div>
-              <Tags tags={data.tags} />
+            <Tags tags={data.tags} />
           </article>
-          <div>
+          <div className={housing.renter}>
             <div className={housing.thumbnail}>
               <Name string={data.host.name} />
-              <img src={data.host.picture} alt={data.host.name} className={housing.picture} />
+              <img
+                src={data.host.picture}
+                alt={data.host.name}
+                className={housing.picture}
+              />
             </div>
-            <Stars />
+            <Stars rating={data.rating} />
           </div>
         </div>
         <div>
