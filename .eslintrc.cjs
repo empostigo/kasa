@@ -17,6 +17,9 @@ module.exports = {
       { allowConstantExport: true }
     ],
     quotes: ["warn", "double"],
-    semi: ["warn", "never"]
+    semi: ["warn", "never"],
+    react: {
+      "prop-types": off
+    }
   }
 }
