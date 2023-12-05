@@ -1,34 +1,48 @@
-import aboutData from "../../data/aboutData"
 import collapse from "./Collapse.module.scss"
 
-const Collapse = (props) => {
+const BasicCollapse = props => {
   return (
     <details className={collapse.details}>
       <summary className={collapse.summary}>{props.title}</summary>
-        {props.children}
+      {props.children}
     </details>
   )
 }
 
-const AboutCollapse = (props) => {
+const DescriptionCollapse = props => {
   return (
-    <Collapse title={props.title}>
+    <BasicCollapse title={props.title}>
       <p className={collapse.description}>{props.description}</p>
-    </Collapse>
+    </BasicCollapse>
   )
 }
 
-export const AboutSection = () => {
-  const collapses = aboutData.map(data => <AboutCollapse key={data.id}
-                                                         title={data.title} 
-                                                         description={data.description} />)
+const LiTag = props => {
+  return <li className={collapse.list}>{props.item}</li>
+}
+
+const HousingCollapse = props => {
+  const liTags = props.list.map(equipment => (
+    <LiTag key={equipment} item={equipment} />
+  ))
   return (
-    <section className={collapse.section}>
-      {collapses}
-    </section>
+    <BasicCollapse title={props.title}>
+      <ul className={collapse.ul}>{liTags}</ul>
+    </BasicCollapse>
   )
 }
 
-export const HousingCollapse = () => {
-  return
+const Collapse = props => {
+  if (props.type === "description")
+    return (
+      <DescriptionCollapse
+        title={props.title}
+        description={props.description}
+      />
+    )
+
+  if (props.type === "list")
+    return <HousingCollapse title={props.title} list={props.list} />
 }
+
+export default Collapse

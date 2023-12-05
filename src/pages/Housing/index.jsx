@@ -5,7 +5,7 @@ import SlideShow from "../../components/SlideShow/SlideShow"
 import Tags from "../../components/Tags/Tags"
 import Name from "../../components/Name/Name"
 import Stars from "../../components/Stars/Stars"
-import { HousingCollapse } from "../../components/Collapse/Collapse"
+import Collapse from "../../components/Collapse/Collapse"
 
 import housing from "./Housing.module.scss"
 
@@ -16,7 +16,7 @@ const Housing = () => {
   return (
     <main className={housing.housing}>
       <SlideShow pictures={data.pictures} />
-      <section>
+      <section className={housing.container}>
         <div className={housing.infos}>
           <article className={housing.banner}>
             <div className={housing.titles}>
@@ -29,18 +29,22 @@ const Housing = () => {
             <div className={housing.thumbnail}>
               <Name string={data.host.name} />
               <img
+                className={housing.picture}
                 src={data.host.picture}
                 alt={data.host.name}
-                className={housing.picture}
               />
             </div>
             <Stars rating={data.rating} />
           </div>
         </div>
-        <div>
-          <HousingCollapse />
-          <HousingCollapse />
-        </div>
+        <section className={housing.section}>
+          <Collapse
+            type="description"
+            title="Description"
+            description={data.description}
+          />
+          <Collapse type="list" title="Équipements" list={data.equipments} />
+        </section>
       </section>
     </main>
   )

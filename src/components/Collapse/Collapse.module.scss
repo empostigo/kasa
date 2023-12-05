@@ -1,55 +1,60 @@
-.section {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.details {
+  position: relative;
+  font-size: 13px;
+  cursor: pointer;
+  background-color: #f6f6f6;
+  border-radius: 5px;
 
-  @media (min-width: 992px) {
-    gap: 30px;
+  &[open] > .summary::after {
+    transform: rotate(180deg);
   }
 
-  .details {
-    position: relative;
-    font-size: 13px;
-    cursor: pointer;
-    background-color: #f6f6f6;
-    border-radius: 5px;
+  @media (min-width: 992px) {
+    font-size: 24px;
+    margin: 0 100px;
+  }
 
-    &[open] > .summary::after {
-      transform: rotate(180deg);
-    }
+  .summary {
+    font-weight: 500;
+    background-color: #ff6060;
+    border-radius: 5px;
+    color: white;
+    list-style: none;
+    padding: 10px;
 
     @media (min-width: 992px) {
-      font-size: 24px;
-      margin: 0 100px;
+      padding: 15px;
     }
 
-    .summary {
-      font-weight: 500;
-      background-color: #ff6060;
-      border-radius: 5px;
-      color: white;
-      list-style: none;
-      padding: 10px;
+    &::after {
+      position: absolute;
+      right: 12px;
+      content: url("../../assets/m-disclosure.svg");
 
       @media (min-width: 992px) {
-        padding: 15px;
-      }
-
-      &::after {
-        position: absolute;
-        right: 12px;
-        content: url("../../assets/m-disclosure.svg");
-
-        @media (min-width: 992px) {
-          content: url("../../assets/d-disclosure.svg");
-          right: 18px;
-        }
+        content: url("../../assets/d-disclosure.svg");
+        right: 18px;
       }
     }
+  }
 
-    .description {
-      color: #ff6060;
-      margin: 20px;
+  .description {
+    color: #ff6060;
+    margin: 20px;
+  }
+
+  .ul {
+    padding: 0;
+    margin-left: 20px;
+  }
+
+  .list {
+    list-style: none;
+    color: #ff6060;
+    font-size: 12px;
+
+    @media (min-width: 992px) {
+      font-size: 18px;
     }
   }
 }

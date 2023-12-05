@@ -81,4 +81,37 @@
       width: 64px;
     }
   }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @media (min-width: 992px) {
+      gap: 24px;
+    }
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media (min-width: 992px) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 76px;
+
+      details {
+        font-size: 18px;
+        width: 50%;
+        margin: 0;
+
+        &[open] ~ details:not([open]),
+        &:first-child:not([open]) {
+          background-color: white;
+        }
+      }
+    }
+  }
 }

@@ -39,7 +39,6 @@ const Stars = props => {
   const rating = []
   const maxRating = 5
   for (let i = 0; i < maxRating; i++) {
-    console.log(i)
     if (i < parseInt(props.rating)) rating.push(<RedStar key={i} />)
     else rating.push(<GreyStar key={i} />)
   }
