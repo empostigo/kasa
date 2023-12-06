@@ -1,10 +1,6 @@
 // React logic
 import React from "react"
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Outlet,
-} from "react-router-dom"
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"
 
 // Pages
 import Home from "../pages/Home"
@@ -32,20 +28,21 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
+        element: <Home />
       },
       {
         path: "/housing/:id",
         element: <Housing />,
+        errorElement: <Error404 />
       },
       {
         path: "/about",
-        element: <About />,
+        element: <About />
       },
       {
         path: "*",
         element: <Error404 />
-      },
+      }
     ]
   }
 ])
