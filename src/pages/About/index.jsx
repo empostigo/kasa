@@ -1,5 +1,8 @@
+// Components
 import Banner from "../../components/Banner/Banner"
 import AboutSection from "../../components/AboutSection/AboutSection"
+
+// Style
 import about from "./About.module.scss"
 
 const About = () => {

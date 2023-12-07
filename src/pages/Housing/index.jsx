@@ -1,16 +1,23 @@
+// Data
 import housingData from "../../data/logements.json"
+
+// React logic
 import { useParams } from "react-router-dom"
 
+// Components
 import SlideShow from "../../components/SlideShow/SlideShow"
 import Tags from "../../components/Tags/Tags"
 import Name from "../../components/Name/Name"
 import Stars from "../../components/Stars/Stars"
 import Collapse from "../../components/Collapse/Collapse"
 
+// Style
 import housing from "./Housing.module.scss"
 
 const Housing = () => {
+  // Get housing id from url parameter
   const { id } = useParams()
+  // And send informations in "logements.json" to data object
   const data = housingData.find(data => data.id === id)
 
   return (

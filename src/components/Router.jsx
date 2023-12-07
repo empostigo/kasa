@@ -1,3 +1,6 @@
+// Data
+import housingData from "../data/logements.json"
+
 // React logic
 import React from "react"
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"
@@ -12,6 +15,7 @@ import Error404 from "../pages/404"
 import Header from "./Header/Header"
 import Footer from "./Footer/Footer"
 
+// Base page with header and footer
 const Layout = () => {
   return (
     <>
@@ -32,15 +36,16 @@ const router = createBrowserRouter([
       },
       {
         path: "/housing/:id",
+        loader: ({ params }) => housingData.find(data => data.id === params.id),
         element: <Housing />,
-        errorElement: <Error404 />
+        errorElement: <Error404 /> // When id doesn't exist
       },
       {
         path: "/about",
         element: <About />
       },
       {
-        path: "*",
+        path: "*", // All other routes don't exist
         element: <Error404 />
       }
     ]
