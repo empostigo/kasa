@@ -12,4 +12,4 @@
 
 La mise en place de l'environement de développement est réalisée avec Vite ⚡
 
-Site de demo sur Netlify : https://oc-kasa.empostigo.dev
+Site de demo sur Netlify : <https://oc-kasa.empostigo.dev>
