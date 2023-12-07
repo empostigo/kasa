@@ -1,5 +1,8 @@
+// Components
 import aboutData from "../../data/aboutData"
 import Collapse from "../Collapse/Collapse"
+
+// Style
 import section from "./AboutSection.module.scss"
 
 const AboutSection = () => {

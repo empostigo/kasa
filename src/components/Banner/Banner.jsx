@@ -1,16 +1,15 @@
-import banner from "./Banner.module.scss"
+// Images
 import homeImg from "../../assets/home-banner.jpg"
 import aboutImg from "../../assets/about-banner.jpg"
 
-const BasicBanner = ({children}) => {
-  return (
-    <section className={banner.banner}>
-      {children}
-    </section>
-  )
+// Style
+import banner from "./Banner.module.scss"
+
+const BasicBanner = ({ children }) => {
+  return <section className={banner.banner}>{children}</section>
 }
 
-const BannerImg = (props) => {
+const BannerImg = props => {
   return (
     <>
       <div className={banner.div}>
@@ -20,16 +19,18 @@ const BannerImg = (props) => {
   )
 }
 
-const HomeBanner = (props) => {
+const HomeBanner = props => {
   return (
     <BasicBanner>
       <BannerImg image={props.image} altText={props.altText} />
-      <h1 className={banner.title}>Chez vous, <span className={banner.span}>partout et ailleurs</span></h1>
+      <h1 className={banner.title}>
+        Chez vous, <span className={banner.span}>partout et ailleurs</span>
+      </h1>
     </BasicBanner>
   )
 }
 
-const AboutBanner = (props) => {
+const AboutBanner = props => {
   return (
     <BasicBanner>
       <BannerImg image={props.image} altText={props.altText} />
@@ -40,14 +41,10 @@ const AboutBanner = (props) => {
 const Banner = () => {
   const pageURL = document.location
 
-  if( /about/.test(pageURL) )
-    return(
-      <AboutBanner image={aboutImg} altText="Bannière Page À Propos" />
-    )
-  
-  return (
-    <HomeBanner image={homeImg} altText="Bannière Page d'Accueil" />
-  )
+  if (/about/.test(pageURL))
+    return <AboutBanner image={aboutImg} altText="Bannière Page À Propos" />
+
+  return <HomeBanner image={homeImg} altText="Bannière Page d'Accueil" />
 }
 
 export default Banner

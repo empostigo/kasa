@@ -1,10 +1,13 @@
+// Components
 import SrcSet from "../SrcSet/SrcSet"
 
+// Images
 import mRedStar from "../../assets/red-m-star.svg"
 import dRedStar from "../../assets/red-d-star.svg"
 import mGreyStar from "../../assets/grey-m-star.svg"
 import dGreyStar from "../../assets/grey-d-star.svg"
 
+// Style
 import starStyle from "./Stars.module.scss"
 
 const RedStar = () => {

@@ -1,3 +1,4 @@
+// Style
 import collapse from "./Collapse.module.scss"
 
 const BasicCollapse = props => {

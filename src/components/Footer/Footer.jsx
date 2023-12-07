@@ -1,5 +1,8 @@
-import footer from "./Footer.module.scss"
+// Image
 import logoImg from "../../assets/black-logo.svg"
+
+// Style
+import footer from "./Footer.module.scss"
 
 const Footer = () => {
   return (
@@ -8,7 +11,7 @@ const Footer = () => {
       <p className={footer.text}>
         <span>&copy; 2020 Kasa. All</span>
         <span>rights reserved</span>
-        </p>
+      </p>
     </footer>
   )
 }
