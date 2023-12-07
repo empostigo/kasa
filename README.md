@@ -1,8 +1,15 @@
-# React + Vite
+# Formation OpenClassrooms - Développeur d'applications Javascript/React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Développer une application Web avec React et React Router
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Cloner le projet
+- Dans le dossier kasa, excuter la commande `npm i`
+- Pour lancer le site en local, executer `npm run dev`
+
+## Informations
+
+La mise en place de l'environement de développement est réalisée avec Vite ⚡
+
+Site de demo sur Netlify : https://oc-kasa.empostigo.dev
