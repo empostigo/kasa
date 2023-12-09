@@ -16,8 +16,8 @@ const RedStar = () => {
       img={dRedStar}
       dImg={dRedStar}
       mImg={mRedStar}
-      mWidth="146"
-      dWidth="18"
+      mWidth="18"
+      dWidth="36"
       maxWidth="991"
       altText="Red Star"
     />
@@ -30,8 +30,8 @@ const GreyStar = () => {
       img={dGreyStar}
       dImg={dGreyStar}
       mImg={mGreyStar}
-      mWidth="146"
-      dWidth="18"
+      mWidth="18"
+      dWidth="36"
       maxWidth="991"
       altText="Grey Star"
     />
