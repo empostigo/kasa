@@ -26,7 +26,7 @@ const Housing = () => {
       <section className={housing.container}>
         <div className={housing.infos}>
           <article className={housing.banner}>
-            <div className={housing.titles}>
+            <div>
               <h1 className={housing.h1}>{data.title}</h1>
               <h2 className={housing.h2}>{data.location}</h2>
             </div>

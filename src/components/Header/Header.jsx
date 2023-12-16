@@ -13,7 +13,7 @@ import header from "./Header.module.scss"
 
 const NavBar = () => {
   return (
-    <nav className={header.navbar}>
+    <nav>
       <ul className={header.ul}>
         <li className={header.li}>
           <Link to="/" className={header.anchor}>
